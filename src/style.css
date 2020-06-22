@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+  color: #ffffff;
+  font-family: "Apercu", sans-serif;
+  font-size: 14px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  letter-spacing: 1px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  margin-right: 100px;
+}
+
+.nav-link {
+  margin: 0 20px;
+  font-size: 18px;
+}
+
+.nav-link a {
+  text-decoration: none;
+}
+
+
+.container {
+  width: 90%;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#header {
+  letter-spacing: 2px;
+  font-size: 16px;
+  margin-bottom: 50px 0;
+}
+
+.headline {
+  color: #a7a7a773;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 50px 0;
+  letter-spacing: 2px;
+}
+
+.bio,
+.blog {
+  width: 70%;
+  padding: 10px 0;
+}
+
+p {
+  line-height: 50px;
+  font-size: 40px;
+  letter-spacing: 1px;
+  padding: 10px 0;
+}
+
+.social,
+.projects,
+.blog {
+  margin: 50px 0;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.s-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 40px;
+}
+
+.s-link span {
+  margin: 10px;
+}
+
+.project-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.project {
+  /* -webkit-box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 1);
+  border-radius: 10px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 350px;
+  height: 350px;
+  transition: transform 0.3s ease-in-out;
+  margin: 20px 20px;
+  padding: 20px 15px;
+}
+
+.project:hover {
+  transform: scale(1.08);
+}
+
+.project-head {
+  font-size: 40px;
+  letter-spacing: 3px;
+  line-height: 56px;
+}
+
+.project-head a {
+  text-decoration: none;
+}
+
+.project-description {
+  font-size: 15px;
+  line-height: 2;
+  width: 100%;
+  color: #d6d6d6bd;
+}
+
+.project-icons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#project-span {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+}
+
+a {
+  outline: none;
+  text-decoration-color: #ffffff;
+  text-decoration-thickness: 0.5em;
+  text-underline-offset: 1.5px;
+  cursor: pointer;
+  color: inherit;
+}
+
+footer {
+  display: block;
+  border-top: 1px solid white;
+  padding-top: 5px;
+  width: 80%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  font-size: 10px;
+}
