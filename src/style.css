@@ -8,7 +8,7 @@ html{
 
 body {
   background-color: black;
-  color: #ffffff;
+  color: white;
   font-family: "Apercu", sans-serif;
   font-size: 14px;
   width: 100%;
@@ -197,4 +197,11 @@ footer {
   .nav-link {
     font-size: 14px;
   } 
+}
+
+@font-face {
+  font-family: 'Apercu';
+  src: url('../media/Apercu.ttf') format('truetype'),
+        url('../media/Apercu.woff') format(('woff'))
+  
 }
