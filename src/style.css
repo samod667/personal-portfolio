@@ -36,6 +36,12 @@ body {
 .nav-link {
   margin: 0 20px;
   font-size: 18px;
+  transition: transform 0.3s ease-in-out; 
+}
+
+.nav-link:hover {
+  transform: scale(1.1);
+  color: #0084ffda;
 }
 
 .nav-link a {
@@ -103,8 +109,8 @@ p {
 }
 
 .s-link:hover {
-  transform: scale(1.2);
-  color: #003cff9f;
+  transform: scale(1.1);
+  color: #0084ffda;
 }
 
 .s-link span {
@@ -196,6 +202,23 @@ footer {
 
   #header {
     width: 100%;
+  }
+  
+  i {
+    width: 10px;
+  }
+
+  .social {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .s-link {
+    margin-left: 20px;
+  }
+
+  .project {
+    margin: 35px 0;
   }
 
   .nav-link {
