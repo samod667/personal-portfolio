@@ -78,10 +78,13 @@ p {
   padding: 10px 0;
 }
 
-.social,
 .projects,
 .blog {
   margin: 50px 0;
+}
+
+.social {
+  margin-bottom: 30px;
 }
 
 .social-links {
@@ -96,6 +99,12 @@ p {
   flex-direction: column;
   align-items: center;
   margin: 0 40px;
+  transition: transform 0.3s ease-in-out; 
+}
+
+.s-link:hover {
+  transform: scale(1.2);
+  color: #003cff9f;
 }
 
 .s-link span {
