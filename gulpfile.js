@@ -19,7 +19,7 @@ gulp.task("minifyHTML", function (done) {
 
 gulp.task("minifyCSS", function (done) {
   return gulp
-    .src("./src/style.css")
+    .src("./style.css")
     .pipe(
       minify({
         minify: true,
