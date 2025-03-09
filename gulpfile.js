@@ -23,7 +23,11 @@ gulp.task("minifyCSS", function (done) {
     .pipe(
       minify({
         minify: true,
-        minifyCSS: true,
+        minifyCSS: {
+          keepSpecialComments: 1,
+          processImport: false,
+          keepQuotes: true // Add this to preserve quotes
+        },
         getKeptComment: function (content, filePath) {
           var m = content.match(/\/\*![\s\S]*?\*\//gim);
           return (m && m.join("\n") + "\n") || "";
@@ -33,6 +37,5 @@ gulp.task("minifyCSS", function (done) {
     .pipe(gulp.dest("./dist"))
     .on("end", done);
 });
-
 // Optional: Run both tasks with 'gulp'
 gulp.task("default", gulp.series("minifyHTML", "minifyCSS"));
