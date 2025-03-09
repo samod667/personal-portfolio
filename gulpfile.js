@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const minify = require('gulp-minifier');
 
-gulp.task("minifyHTML", function () {
+gulp.task("minifyHTML", function (done) {
   return gulp
     .src("./index.html")
     .pipe(
@@ -10,12 +10,14 @@ gulp.task("minifyHTML", function () {
         minifyHTML: {
           collapseWhitespace: true,
           conservativeCollapse: true,
-        }})
+        },
+      })
     )
-    .pipe(gulp.dest("./dist"));
+    .pipe(gulp.dest("./dist"))
+    .on("end", done);
 });
 
-gulp.task("minifyCSS", function () {
+gulp.task("minifyCSS", function (done) {
   return gulp
     .src("./src/style.css")
     .pipe(
@@ -28,5 +30,9 @@ gulp.task("minifyCSS", function () {
         },
       })
     )
-    .pipe(gulp.dest("./dist"));
+    .pipe(gulp.dest("./dist"))
+    .on("end", done);
 });
+
+// Optional: Run both tasks with 'gulp'
+gulp.task("default", gulp.series("minifyHTML", "minifyCSS"));
